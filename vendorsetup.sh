@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="RMX2061"
+FDEVICE="RMX2081"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -35,7 +35,7 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export DEVICE_PATH=device/realme/RMX2061
+	export DEVICE_PATH=device/realme/RMX2081
 	export LC_ALL="C.UTF-8"
  	export ALLOW_MISSING_DEPENDENCIES=true
 	export PLATFORM_VERSION=20.1.0
@@ -84,6 +84,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_ENABLE_USB_STORAGE=1
 	export OF_NO_SPLASH_CHANGE=1
 	export OF_HIDE_NOTCH=1
+	
+	# Maintainer
+	export OF_MAINTAINER=NishantKumar6342
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
