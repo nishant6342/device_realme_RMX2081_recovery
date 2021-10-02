@@ -144,4 +144,7 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mass_storage,adb
 on property:sys.usb.config=fastboot
     start fastbootd
 	
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+	
 #
