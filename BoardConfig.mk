@@ -16,6 +16,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/realme/RMX2081
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -104,7 +106,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 83886080
 BOARD_SUPER_PARTITION_SIZE := 8707375104
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8707375104
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor odm
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system product vendor odm
 
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
@@ -127,6 +129,7 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
+PLATFORM_VERSION := 20.1.0
 
 # Add sepolicy for fixing binderfs mounting with android-10 sources
 include $(DEVICE_PATH)/sepolicy/sepolicy.mk
@@ -180,6 +183,20 @@ TW_OZIP_DECRYPT_KEY="0000"
 
 # Build with minimal manifest
 ALLOW_MISSING_DEPENDENCIES=true
+
+# SHRP build flags
+SHRP_DEVICE_CODE := RMX2081
+SHRP_PATH := device/realme/$(SHRP_DEVICE_CODE)
+SHRP_MAINTAINER := NishantKumar6342
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := A_Only
+SHRP_REC := /dev/block/by-name/recovery
+SHRP_EDL_MODE := 1
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_STATUSBAR_RIGHT_PADDING := 34
+SHRP_STATUSBAR_LEFT_PADDING := 261
+SHRP_EXPRESS := true
 
 
 #
