@@ -6,6 +6,7 @@ load_X3()
     resetprop "ro.product.model" "Realme X3"
     resetprop "ro.product.device" "RMX2081L1"
 	resetprop "ro.commonsoft.ota" "RMX2081L1"
+	resetprop "ro.product.product.device" "RMX2081L1"
 }
 
 load_X3SZ()
@@ -14,6 +15,7 @@ load_X3SZ()
     resetprop "ro.product.model" "Realme X3 SuperZoom"
     resetprop "ro.product.device" "RMX2085L1"
 	resetprop "ro.commonsoft.ota" "RMX2085L1"
+	resetprop "ro.product.product.device" "RMX2085L1"
 }
 
 load_X3SZ1()
@@ -22,6 +24,7 @@ load_X3SZ1()
     resetprop "ro.product.model" "Realme X3"
     resetprop "ro.product.device" "RMX2082L1"
 	resetprop "ro.commonsoft.ota" "RMX2082L1"
+	resetprop "ro.product.product.device" "RMX2082L1"
 }
 
 load_X3SZ2()
@@ -30,6 +33,7 @@ load_X3SZ2()
     resetprop "ro.product.model" "Realme X3 SuperZoom"
     resetprop "ro.product.device" "RMX2086L1"
 	resetprop "ro.commonsoft.ota" "RMX2086L1"
+	resetprop "ro.product.product.device" "RMX2086L1"
 }
 
 load_X3SZ3()
@@ -38,6 +42,7 @@ load_X3SZ3()
     resetprop "ro.product.model" "Realme X3"
     resetprop "ro.product.device" "RMX2083L1"
 	resetprop "ro.commonsoft.ota" "RMX2083L1"
+	resetprop "ro.product.product.device" "RMX2083L1"
 }
 
 project=$(cat /proc/oppoVersion/prjName)
