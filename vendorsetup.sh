@@ -85,6 +85,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_NO_SPLASH_CHANGE=1
 	export OF_HIDE_NOTCH=1
 	
+	# Unified X3 and X3 SuperZoom
+	export TARGET_DEVICE_ALT="RMX2081L1, RMX2085L1, RMX2086L1, RMX2083L1, RMX2082L1"
+	
 	# Maintainer
 	export OF_MAINTAINER=NishantKumar6342
 
