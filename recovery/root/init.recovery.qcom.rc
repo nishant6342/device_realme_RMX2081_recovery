@@ -111,4 +111,14 @@ on property:crypto.ready=1 && property:hwservicemanager.ready=true
 on property:sys.listeners.registered=true
     start keymaster-4-0-qti
 
+service unified-script /system/bin/unified-script.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on boot
+    chmod 0777 /system/bin/unified-script.sh
+    start unified-script
 #
