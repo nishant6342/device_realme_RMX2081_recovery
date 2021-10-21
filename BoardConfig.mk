@@ -178,6 +178,9 @@ TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk" #needed for Android 11 Gapps
 TW_NO_SCREEN_BLANK := true
 TARGET_SUPPORTS_64_BIT_APPS := true
 
+# Disable APEX
+TW_EXCLUDE_APEX := true
+
 # OZIP Support
 TW_OZIP_DECRYPT_KEY="0000"
 
